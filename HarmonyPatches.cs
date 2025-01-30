@@ -579,7 +579,7 @@ namespace AccessAbility
 
 
     [HarmonyPatch(typeof(PlatformLeaderboardsModel), "UploadScore")]
-    [HarmonyPatch(new Type[] { typeof(IDifficultyBeatmap), typeof(int), typeof(int), typeof(int), typeof(bool), typeof(int), typeof(int), typeof(int), typeof(int), typeof(float), typeof(GameplayModifiers) })]
+    [HarmonyPatch(new Type[] { typeof(BeatmapKey), typeof(int), typeof(int), typeof(int), typeof(bool), typeof(int), typeof(int), typeof(int), typeof(int), typeof(float), typeof(GameplayModifiers) })]
     internal sealed class PlatformLeaderboardsModelPatch_2
     {
         private static bool Prefix()
