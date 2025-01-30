@@ -22,16 +22,16 @@ namespace AccessAbility
 
         public void Initialize()
         {
-            GameplaySetup.instance.AddTab("AccessAbility", "AccessAbility.ModifierUI.bsml", this, MenuType.All);
+            GameplaySetup.Instance.AddTab("AccessAbility", "AccessAbility.ModifierUI.bsml", this, MenuType.All);
             Donate.Refresh_Text();
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Donate_Update_Dynamic)));
         }
 
         public void Dispose()
         {
-            if (GameplaySetup.instance != null)
+            if (GameplaySetup.Instance != null)
             {
-                GameplaySetup.instance.RemoveTab("AccessAbility");
+                GameplaySetup.Instance.RemoveTab("AccessAbility");
             }
         }
 
